@@ -1,0 +1,11 @@
+# Build
+obj/
+ft_ls
+*.o
+*.a
+
+# OS
+.DS_Store
+
+# 42
+en.subject.pdf
