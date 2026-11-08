@@ -7,10 +7,12 @@
  * SPDX-License-Identifier: blessing
  */
 
-#include <stdio.h>
+#include "ft_ls.h"
 
-int	main(void)
+int	main(int argc, char **argv)
 {
-	printf("Hello, World!\n");
+	t_ft_ls	ls;
+
+	bootstrap(&ls, argc, argv);
 	return (0);
 }

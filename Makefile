@@ -3,7 +3,8 @@ NAME     = ft_ls
 CC       = cc
 CFLAGS   = -Wall -Wextra -Werror
 
-SRCS     = src/main.c
+SRCS     = src/main.c \
+           src/flags_parser.c
 OBJS     = $(SRCS:src/%.c=obj/%.o)
 
 all: $(NAME)
