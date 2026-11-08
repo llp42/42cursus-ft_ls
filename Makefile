@@ -4,7 +4,8 @@ CC       = cc
 CFLAGS   = -Wall -Wextra -Werror
 
 SRCS     = src/main.c \
-           src/flags_parser.c
+           src/flags_parser.c \
+           src/list_dir.c
 OBJS     = $(SRCS:src/%.c=obj/%.o)
 
 all: $(NAME)

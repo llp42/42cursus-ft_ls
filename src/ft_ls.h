@@ -11,6 +11,8 @@
 #define FT_LS_H
 
 #include <stdbool.h>
+#include <stddef.h>
+#include <sys/stat.h>
 
 typedef struct s_ft_ls
 {
@@ -29,6 +31,21 @@ typedef struct s_ft_ls
 	char **operands;
 } t_ft_ls;
 
+typedef struct s_entry
+{
+	char *name;
+	char *path;
+	struct stat st;
+} t_entry;
+
+typedef struct s_dir
+{
+	t_entry *entries;
+	size_t count;
+	size_t capacity;
+} t_dir;
+
 void bootstrap(t_ft_ls *ls, int argc, char **argv);
+void list_dir(const t_ft_ls *ls, const char *path);
 
 #endif
